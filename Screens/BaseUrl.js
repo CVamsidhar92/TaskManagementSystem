@@ -1,0 +1,1 @@
+export const BaseUrl = "https://scrailway.co.in/webops/php/tma_bk1/api/";
