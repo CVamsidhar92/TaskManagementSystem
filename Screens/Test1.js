@@ -39,7 +39,7 @@ export function Test1({navigation}) {
   // const [myversion,setmyversion] = useState('1.2');
   const [loading, setLoading] = useState(false);
   // const never forget to change this while releasing app , increment 1 every tiime 
-  var myversion = '3.0';
+  var myversion = '3.2';
   const [count,setcount] = useState(0);
   
 
@@ -219,7 +219,7 @@ const getactive = async () => {
         alert('No Data Available')
     }
     else{
-        navigation.navigate('Tabnav',{ref:'active',id:myid});
+        navigation.navigate('Tabnav',{ref:'Active',id:myid});
     }
     
 }
@@ -230,7 +230,7 @@ const getactive = async () => {
         alert('No Data Available')
     }
     else{
-    navigation.navigate('Tabnav',{ref:'completed',id:myid});
+    navigation.navigate('Tabnav',{ref:'Completed',id:myid});
     }
   }
 
@@ -240,7 +240,7 @@ const getactive = async () => {
         alert('No Data Available')
     }
     else{
-        navigation.navigate('Tabnav',{ref:'overdue',id:myid});
+        navigation.navigate('Tabnav',{ref:'Over Due',id:myid});
     }
     
     

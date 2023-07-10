@@ -67,12 +67,20 @@ export default function App({navigation}){
 <NavigationContainer ref={navigationRef} independent={true}>
       <Stack.Navigator  initialRouteName="Home">
          <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
-         <Stack.Screen name="Tabnav" component={Tabnav} options={{title:'Task Details',headerStyle: {
-            backgroundColor: '#0071b3',
-         },headerTitleStyle:{
-          color:'white',
-          fontSize:18
-        },}}/>
+         <Stack.Screen
+  name="Tabnav"
+  component={Tabnav}
+  options={({ route }) => ({
+    title: route.params?.ref + ' Task Details'|| 'Task Details',
+    headerStyle: {
+      backgroundColor: '#0071b3',
+    },
+    headerTitleStyle: {
+      color: 'white',
+      fontSize: 18,
+    },
+  })}
+/>
         <Stack.Screen name="Task" component={Task} options={{headerShown:false}}/>
         <Stack.Screen name="CreateTask" component={CreateTask} options={{title:'Create Task',headerStyle: {
             backgroundColor: '#0071b3',
